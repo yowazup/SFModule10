@@ -12,7 +12,6 @@ namespace SFModule10
 
         public static void TryCatch(string item)
         {
-
             try
             {
                 if (String.IsNullOrWhiteSpace(item))
@@ -40,6 +39,19 @@ namespace SFModule10
             {
                 Console.WriteLine("Пользователь ввел число вне диапазона от -100 до 100. {0}", ex.Message);
             }
+        }
+
+        public static int While(string item, out int result)
+        {
+            
+            while (!int.TryParse(item, out result) || result > 100 || result < -100)
+            {
+                Check.TryCatch(item);
+                Console.WriteLine();
+                Console.WriteLine("Вы ввели неверное значение. Ответ должен быть целым числом от -100 до 100. Введите правильное значение: ");
+                item = Console.ReadLine();
+            }
+            return result;
         }
 
     }

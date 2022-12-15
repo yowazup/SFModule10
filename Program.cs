@@ -28,13 +28,7 @@ namespace SFModule10
             int a;
             var check = Console.ReadLine();
 
-            while (!int.TryParse(check, out a) || a > 100 || a < -100)
-            {
-                Check.TryCatch(check);
-                Console.WriteLine();
-                Console.WriteLine("Вы ввели неверное значение. Ответ должен быть целым числом от -100 до 100. Введите правильное значение: ");
-                check = Console.ReadLine();
-            }
+            Check.While(check, out a);
 
             Console.WriteLine();
             Console.WriteLine("Сообщите второе число:");
@@ -42,13 +36,7 @@ namespace SFModule10
             int b;
             check = Console.ReadLine();
 
-            while (!int.TryParse(check, out b) || b > 100 || b < -100)
-            {
-                Check.TryCatch(check);
-                Console.WriteLine();
-                Console.WriteLine("Вы ввели неверное значение. Ответ должен быть целым числом от -100 до 100. Введите правильное значение: ");
-                check = Console.ReadLine();
-            }
+            Check.While(check, out b);
 
             Console.WriteLine();
 
