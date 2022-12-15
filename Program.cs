@@ -26,24 +26,28 @@ namespace SFModule10
             Console.WriteLine("Сообщите первое число:");
 
             int a;
+            var check = Console.ReadLine();
 
-            while (!int.TryParse(Console.ReadLine(), out a) || a > 100 || a < -100)
+            while (!int.TryParse(check, out a) || a > 100 || a < -100)
             {
-                Check.TryCatch(a.ToString());
+                Check.TryCatch(check);
                 Console.WriteLine();
                 Console.WriteLine("Вы ввели неверное значение. Ответ должен быть целым числом от -100 до 100. Введите правильное значение: ");
+                check = Console.ReadLine();
             }
 
             Console.WriteLine();
             Console.WriteLine("Сообщите второе число:");
 
             int b;
+            check = Console.ReadLine();
 
-            while (!int.TryParse(Console.ReadLine(), out b) || b > 100 || b < -100)
+            while (!int.TryParse(check, out b) || b > 100 || b < -100)
             {
-                Check.TryCatch(b.ToString());
+                Check.TryCatch(check);
                 Console.WriteLine();
                 Console.WriteLine("Вы ввели неверное значение. Ответ должен быть целым числом от -100 до 100. Введите правильное значение: ");
+                check = Console.ReadLine();
             }
 
             Console.WriteLine();

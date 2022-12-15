@@ -15,21 +15,17 @@ namespace SFModule10
 
             try
             {
-                if (!String.IsNullOrWhiteSpace(item))
+                if (String.IsNullOrWhiteSpace(item))
                 {
                     throw new ArgumentNullException();
                 }
-                else
+                else if (!int.TryParse(item, out int result))
                 {
-                    if (int.TryParse(item, out int result))
-                    {
-                        throw new FormatException();
-                    }
-                    else
-                    {
-                        if (int.Parse(item) < -100 || int.Parse(item) > 100)
-                            throw new ArgumentOutOfRangeException();
-                    }
+                    throw new FormatException();
+                }
+                else if (result < -100 || result > 100)
+                {
+                    throw new ArgumentOutOfRangeException();
                 }
             }
             catch (ArgumentNullException ex)

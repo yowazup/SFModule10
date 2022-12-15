@@ -15,7 +15,6 @@ namespace SFModule10
 
     public class Logger : ILogger
     {
-
         public void Error(string message)
         {
             Console.BackgroundColor = ConsoleColor.Red;
