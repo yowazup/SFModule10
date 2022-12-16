@@ -46,7 +46,7 @@ namespace SFModule10
             
             while (!int.TryParse(item, out result) || result > 100 || result < -100)
             {
-                Check.TryCatch(item);
+                TryCatch(item);
                 Console.WriteLine();
                 Console.WriteLine("Вы ввели неверное значение. Ответ должен быть целым числом от -100 до 100. Введите правильное значение: ");
                 item = Console.ReadLine();
