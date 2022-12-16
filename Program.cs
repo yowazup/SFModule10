@@ -12,18 +12,19 @@ using System.Collections.Generic;
 using System.Net.Security;
 using System.Data.Common;
 
+/// <summary>
+/// Программа, которая запрашивает на ввод 2 слагаемых (от -100 до 100) (метод Main), проверяет корректность 
+/// ввода информации и выводит исключения (Check.cs), логирует событие начала и окончания расчета (Logger.cs), 
+/// производит расчет и выводит их сумму в консоль (Calculator.cs).
+/// </summary>
+/// <param name="args"></param>
+
 namespace SFModule10
 {
     public class Program
     {
         static ILogger Logger { get; set; }
 
-        /// <summary>
-        /// Программа, которая запрашивает на ввод 2 слагаемых (от -100 до 100) (метод Main), проверяет корректность 
-        /// ввода информации и выводит исключения (Check.cs), логирует событие начала и окончания расчета (Logger.cs), 
-        /// производит расчет и выводит их сумму в консоль (Calculator.cs).
-        /// </summary>
-        /// <param name="args"></param>
         static void Main(string[] args)
         {
 
