@@ -30,7 +30,7 @@ namespace SFModule10
             Logger.Event("Расчет окончен.");
             Thread.Sleep(1000);
             Console.WriteLine();
-            Console.WriteLine("Рузультат получался такой: {0}", c);
+            Console.WriteLine("Рузультат получился такой: {0}", c);
         }
     }
 }
